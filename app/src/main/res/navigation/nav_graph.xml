@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.memorias.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_TercerFragmento"
+            app:destination="@id/TercerFragmento" />
+        <action
+            android:id="@+id/action_FirstFragment_to_CuartoFragmento"
+            app:destination="@id/CuartoFragmento" />
+        <argument
+            android:name="DificultadP1"
+            app:argType="string" />
+        <argument
+            android:name="NombreP1"
+            app:argType="string" />
+        <argument
+            android:name="TagsP1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.memorias.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <argument
+            android:name="Nombre"
+            app:argType="string" />
+        <argument android:name="Dificultad"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/TercerFragmento"
+        android:name="com.example.memorias.Dificil"
+        android:label="@string/TercerFragmento"
+        tools:layout="@layout/fragment_dificil">
+        <action
+            android:id="@+id/action_TercerFragmento_to_FirstFragment2"
+            app:destination="@id/FirstFragment" />
+        <argument
+            android:name="Nombre"
+            app:argType="string" />
+        <argument
+            android:name="Dificultad"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/CuartoFragmento"
+        android:name="com.example.memorias.Resultados"
+        android:label="@string/CuartoFragmento"
+        tools:layout="@layout/fragment_resultados">
+
+
+        <argument
+            android:name="Nombre"
+            app:argType="string" />
+        <argument
+            android:name="Dificultad"
+            app:argType="string" />
+        <argument
+            android:name="Tags"
+            app:argType="integer" />
+    </fragment>
+</navigation>
